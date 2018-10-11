@@ -1,10 +1,10 @@
+cyan='\033[01;36m'
+bold='\033[1m'
+nc='\033[0m'
+
 function fileTour {
     for file in $1/*; do
         local name=`basename $file`
-        local count=$2
-        local cyan='\033[01;36m'
-        local bold='\033[1m'
-        local nc='\033[0m'
 
         if [ -d $1/$name ]; then
             echo "$2 ${cyan}${bold}$name${nc}"
