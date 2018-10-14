@@ -7,7 +7,7 @@ function fileTour {
     do
         local name=`basename $file`
 
-        if [ -d $1/$name ]; then
+        if [ -d $file ]; then
             echo "$2 ${cyan}${bold}$name${nc}"
             fileTour $file "$2\t"
         else
