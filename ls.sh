@@ -3,7 +3,8 @@ bold='\033[1m'
 nc='\033[0m'
 
 function fileTour {
-    for file in $1/*; do
+    for file in $1/*; 
+    do
         local name=`basename $file`
 
         if [ -d $1/$name ]; then
@@ -16,7 +17,8 @@ function fileTour {
 }
 
 function checkPath {
-    while read -p "Enter your path: " path; do
+    while read -p "Enter your path: " path; 
+    do
         if ! [ -d $path ]; then
             echo "\"$path\" doesn't exist!"
         else
