@@ -8,7 +8,7 @@ function fileTour {
 
         if [ -d $1/$name ]; then
             echo "$2 ${cyan}${bold}$name${nc}"
-            fileTour $1/$name "$2\t"
+            fileTour $file "$2\t"
         else
             echo "$2 $name"
         fi       
@@ -16,9 +16,7 @@ function fileTour {
 }
 
 function checkPath {
-    echo "Enter your path:"
-
-    while read path; do
+    while read -p "Enter your path: " path; do
         if ! [ -d $path ]; then
             echo "\"$path\" doesn't exist!"
         else
